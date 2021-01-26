@@ -142,8 +142,8 @@ EOM
 
 export DEBIAN_FRONTEND=noninteractive
 
-dlink="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/APT"
-wget $dlink/XFCE4/xfce4_de.sh -O $directory/root/xfce4_de.sh
+dlink="https://raw.githubusercontent.com/praisedev/linux-on-proot/main/ubuntu"
+wget $dlink/after-install.sh -O $directory/root/after-install.sh
 clear
 echo "Setting up the installation of XFCE VNC"
 
@@ -151,11 +151,11 @@ echo "APT::Acquire::Retries \"3\";" > $directory/etc/apt/apt.conf.d/80-retries #
 echo "#!/bin/bash
 apt update -y && apt install sudo wget -y
 clear
-if [ ! -f /root/xfce4_de.sh ]; then
-    wget --tries=20 $dlink/XFCE4/xfce4_de.sh -O /root/xfce4_de.sh
-    bash ~/xfce4_de.sh
+if [ ! -f /root/after-install.sh ]; then
+    wget --tries=20 $dlink/after-install.sh -O /root/after-install.sh
+    bash ~/after-install.sh
 else
-    bash ~/xfce4_de.sh
+    bash ~/after-install.sh
 fi
 clear
 rm -rf ~/.bash_profile" >> $directory/root/.bash_profile 
