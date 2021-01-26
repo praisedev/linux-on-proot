@@ -3,10 +3,10 @@
 #Get the necessary components
 apt-mark hold udisks2
 [ ! -f /root/.parrot ] && apt-get update || echo "Parrot detected, not updating apt cache since that will break the whole distro"
-apt-get install keyboard-configuration -y
-apt-get install sudo wget -y
-apt-get install xfce4 xfce4-terminal xfce4-goodies tigervnc-standalone-server novnc websockify python3-numpy build-essential net-tools curl git software-properties-common firefox -y
-apt-get install xfe -y
+DEBIAN_FRONTEND=noninteractive apt-get install keyboard-configuration -y
+DEBIAN_FRONTEND=noninteractive apt-get install sudo wget -y
+DEBIAN_FRONTEND=noninteractive apt-get install xfce4 xfce4-terminal xfce4-goodies tigervnc-standalone-server novnc websockify python3-numpy build-essential net-tools curl git software-properties-common firefox -y
+DEBIAN_FRONTEND=noninteractive apt-get install xfe -y
 apt-get clean
 
 #Setup the necessary files
