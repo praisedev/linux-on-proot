@@ -5,7 +5,7 @@ LD_LIBRARY_PATH=$PWD/.apt/usr/lib/x86_64-linux-gnu:$PWD/.apt/usr/lib:
 time1="$( date +"%r" )"
 
 install1 () {
-directory=/tmp/.x11-unix/ub-fs
+directory=/ub-fs
 UBUNTU_VERSION=18.04
 if [ -d "$directory" ];then
 first=1
