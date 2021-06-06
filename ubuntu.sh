@@ -142,7 +142,7 @@ EOM
 
 export DEBIAN_FRONTEND=noninteractive
 
-dlink="https://raw.githubusercontent.com/praisedev/linux-on-proot/main/ubuntu"
+dlink="https://raw.githubusercontent.com/praisedev/linux-on-proot/main/"
 wget $dlink/after-install.sh -O $directory/root/after-install.sh
 clear
 echo "Setting up the installation"
