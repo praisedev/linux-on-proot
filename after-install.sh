@@ -1,10 +1,11 @@
 #!/bin/bash
 
 #Get the necessary components
-apt-mark hold udisks2
+#apt-mark hold udisks2
 [ ! -f /root/.parrot ] && apt-get update || echo "Parrot detected, not updating apt cache since that will break the whole distro"
 #apt-get install keyboard-configuration -y
-apt-get install sudo wget nano curl -y
+#apt-get install sudo wget nano curl -y
+apt-get install dropbear -y
 #mariadb-server mariadb-client -y
 #apache2 php7.2 libapache2-mod-php7.2 php7.2-mysql php7.2-curl php7.2-gd php-memcache php7.2-recode php7.2-mbstring php-gettext php7.2-opcache php-apcu phpmyadmin 
 #apt-get install xfce4 xfce4-terminal tigervnc-standalone-server -y
